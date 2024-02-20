@@ -1,6 +1,5 @@
 package CalculatorModel.View;
 
-
 import CalculatorModel.Model.ComplexNumber;
 
 import java.util.Locale;
@@ -15,7 +14,7 @@ public class View {
 
     public int chooseNumberType() {
         System.out.println("Выберите тип чисел:");
-        System.out.println("1. Реальные числа");
+        System.out.println("1. Действительные числа");
         System.out.println("2. Комплексные числа");
         System.out.print("Ваш выбор: ");
         return in.nextInt();
@@ -38,12 +37,12 @@ public class View {
         System.out.printf("%s %.1f%n", title, data);
     }
 
-    public void printComplexNumber(ComplexNumber number, String title) {
-        System.out.printf("%s: %.1f + %.1fi%n", title, number.getReal(), number.getImaginary());
-    }
-
-    public double getValue(String s) {
-        System.out.print(s);
-        return in.nextDouble();
+    public int chooseOperationType() {
+        System.out.println("Выберите тип операции с числами:");
+        System.out.println("1. Суммирование");
+        System.out.println("2. Умножение");
+        System.out.println("3. Деление");
+        System.out.print("Ваш выбор: ");
+        return in.nextInt();
     }
 }

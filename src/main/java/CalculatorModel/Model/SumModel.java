@@ -1,14 +1,39 @@
 package CalculatorModel.Model;
 
 public class SumModel extends CalcModel {
+    private ComplexNumber complexA; // Для комплексных чисел
+    private ComplexNumber complexB; // Для комплексных чисел
+
+    public void setComplexA(ComplexNumber complexA) {
+        this.complexA = complexA;
+    }
+
+    public void setComplexB(ComplexNumber complexB) {
+        this.complexB = complexB;
+    }
+
+    // Переопределяем метод result() для учета комплексных чисел
     @Override
     public double result() {
-        // Выполнение операции сложения для комплексных чисел
-        if (realX != 0 || imagX != 0 || realY != 0 || imagY != 0) {
-            return realX + realY + imagX + imagY;
+        double result = 0.0;
+
+        // Если комплексные числа не заданы, выполняем операцию для действительных чисел
+        if (complexA == null && complexB == null) {
+            result = x + y;
         } else {
-            // Для действительных чисел
-            return x + y;
+            // Для комплексных чисел
+            result = complexA.getReal() + complexA.getImaginary() + complexB.getReal() + complexB.getImaginary();
         }
+
+        return result;
+    }
+
+    // Методы для установки значений для реальных чисел
+    public void setRealX(double realX) {
+        this.realX = realX;
+    }
+
+    public void setRealY(double realY) {
+        this.realY = realY;
     }
 }
