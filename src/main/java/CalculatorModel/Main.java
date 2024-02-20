@@ -9,9 +9,12 @@ import CalculatorModel.Presenter.Presenter;
 import CalculatorModel.View.View;
 
 import java.io.File;
+import java.io.IOException;
+
+
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         File logsDirectory = new File("logs");
         if (!logsDirectory.exists()) {
@@ -83,8 +86,8 @@ public class Main {
             // Инициализация логгера и презентера
             Logger logger = new Logger("logs/log.txt");
             Presenter presenter = new Presenter(view, sumModel, logger);
-
             presenter.buttonClick();
+            logger.close();
         }
     }
 }
