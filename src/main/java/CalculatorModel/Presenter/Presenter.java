@@ -1,6 +1,5 @@
 package CalculatorModel.Presenter;
 
-import CalculatorModel.Model.Logger;
 import CalculatorModel.Model.Model;
 import CalculatorModel.View.View;
 

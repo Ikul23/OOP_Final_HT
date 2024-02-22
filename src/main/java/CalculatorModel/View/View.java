@@ -17,6 +17,8 @@ public class View {
         System.out.println("1. Действительные числа");
         System.out.println("2. Комплексные числа");
         System.out.print("Ваш выбор: ");
+        int choice = in.nextInt();
+        in.nextLine(); // Очистка буфера ввода
         return in.nextInt();
     }
 

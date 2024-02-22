@@ -1,6 +1,6 @@
 package CalculatorModel;
 
-import CalculatorModel.Model.Logger;
+import CalculatorModel.Presenter.Logger;
 import CalculatorModel.Model.ComplexNumber;
 import CalculatorModel.Model.SumModel;
 import CalculatorModel.Model.MultModel;
@@ -88,6 +88,6 @@ public class Main {
             Presenter presenter = new Presenter(view, sumModel, logger);
             presenter.buttonClick();
             logger.close();
-        }
+             }
     }
 }

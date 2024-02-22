@@ -20,10 +20,10 @@ public class MultModel extends CalcModel {
 
         // Если комплексные числа не заданы, выполняем операцию для действительных чисел
         if (complexA == null && complexB == null) {
-            result = x * y;
+            result = super.result(); // Используем родительский метод для выполнения операции над действительными числами
         } else {
             // Для комплексных чисел
-            result = complexA.getReal() * complexA.getImaginary() * complexB.getReal() * complexB.getImaginary();
+            result = complexA.getReal() * complexB.getReal() - complexA.getImaginary() * complexB.getImaginary();
         }
 
         return result;
