@@ -3,7 +3,7 @@ package CalculatorModel.Model;
 public class MultModel extends CalcModel {
 
     private ComplexNumber complexA; // Для комплексных чисел
-    private ComplexNumber complexB; // Для комплексных чисел
+    private ComplexNumber complexB; // Для комплексных чисел:ЖЖЖЖЖЖЖЖЖЖ::
 
     public void setComplexA(ComplexNumber complexA) {
         this.complexA = complexA;
@@ -38,3 +38,5 @@ public class MultModel extends CalcModel {
         this.realY = realY;
     }
 }
+
+
